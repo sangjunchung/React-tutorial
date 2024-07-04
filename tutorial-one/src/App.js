@@ -16,6 +16,12 @@ import R02 from './R02_FunctionComponent.js';
 import Props1 from './R03_Props.js';
 import Props2 from './R04_Props2.js';
 import Props3 from './R05_Props3.js';
+import 예제1 from './R06_State1.js'; // '' "" 크게 상관 없음
+import 예제2 from './R07_State2.js';
+import 예제3번 from './R08_State3.js';
+import 예제4번 from './R09_State4.js';
+import 예제5번 from './R10_State5.js';
+import 예제6번 from './R11_State6.js';
 
 function App() {
   return (
@@ -25,14 +31,15 @@ function App() {
           { / * * / } -> 주로 코드를 주석 처리할 때 사용
     */
     <div className="App-header">
-        {/*<R01 />*/}
-        {/*<R02 />*/}
+        {/*<R01 />
         <Props1 num='1' name='홍길동' age='20' score='90' />
         <Props1 num='2' name='홍길은' age='30' score='80' />
         <Props1 num='3' name='홍길금' age='40' score='70' />
+        */}
+        {/*<R02 />
         <h3>Props 예제 2번 사용하기</h3>
         <Props2 name='강감찬' age='72' gender="남자" />
-
+        */}
         {/*
         <Props2 name='강감찬' age='72' gender="남자" />
 
@@ -41,9 +48,18 @@ function App() {
         <div className="info">
             이름 : 강감찬 / 나이 : 72 / 성별 : 남자
         </div> 
-        */}
+        
         <h3>Props 예제 3번 사용하기</h3>
         <Props3 num='5' name="김연정" age='40' gender='여자' phone='010-1111-2222' />
+        */}
+
+        {/* <예제1 /> */}
+        {/* <예제2 /> */}
+        {/* <예제3번 init="50" step="10" /> */}
+        {/* init = 초기값, step = 증감값 */}
+        {/* <예제4번 init="40" years="1" /> */}
+        {/* <예제5번 /> */}
+        <예제6번 />
     </div>
   );
 }
