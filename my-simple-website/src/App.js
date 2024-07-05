@@ -1,11 +1,15 @@
 
 import './App.css';
+import Game from './component/Game';
+import GameTwoStep from './component/GameTwoStep';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>홈페이지 오신 것을 환영합니다.</h1>
+        {/* <Game /> */}
+        <GameTwoStep />
       </header>
       <main>
         <section>
