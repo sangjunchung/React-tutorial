@@ -11,20 +11,22 @@ js를 가져올 때는 import [여기서 사용할 이름] from "javascript파�
 R01.ClassComponent.js를 가져와서 App.js에 적용
 R01.ClassComponent.js R01 이라는 별칭을 사용해서 App.js 적용
 */
-import R01 from "./R01_ClassComponent.js";
-import R02 from './R02_FunctionComponent.js';
-import Props1 from './R03_Props.js';
-import Props2 from './R04_Props2.js';
-import Props3 from './R05_Props3.js';
-import 예제1 from './R06_State1.js'; // '' "" 크게 상관 없음
-import 예제2 from './R07_State2.js';
-import 예제3번 from './R08_State3.js';
-import 예제4번 from './R09_State4.js';
-import 예제5번 from './R10_State5.js';
-import 예제6번 from './R11_State6.js';
-import 컨텍스트1 from './R12_Context1.js';
-import 컨텍스트2 from './R13_Context2.js';
-import 부트스트랩1 from './R14_Bootstrap.js';
+import R01 from "./component/R01_ClassComponent.js";
+import R02 from './component/R02_FunctionComponent.js';
+import Props1 from './component/R03_Props.js';
+import Props2 from './component/R04_Props2.js';
+import Props3 from './component/R05_Props3.js';
+import 예제1 from './component/R06_State1.js'; // '' "" 크게 상관 없음
+import 예제2 from './component/R07_State2.js';
+import 예제3번 from './component/R08_State3.js';
+import 예제4번 from './component/R09_State4.js';
+import 예제5번 from './component/R10_State5.js';
+import 예제6번 from './component/R11_State6.js';
+import 컨텍스트1 from './component/R12_Context1.js';
+import 컨텍스트2 from './component/R13_Context2.js';
+import 컨텍스트3 from "./component/R15_Context3/Parent.js";
+import 컨텍스트4 from './component/R16_Context4/UserPrintSpace.js';
+import 부트스트랩1 from './component/R14_Bootstrap.js';
 
 function App() {
   return (
@@ -65,7 +67,9 @@ function App() {
         {/* <예제6번 /> */}
         {/* <컨텍스트1 /> */}
         {/* <부트스트랩1 /> */}
-        <컨텍스트2 />
+        {/* <컨텍스트2 /> */}
+        {/* <컨텍스트3 /> */}
+        <컨텍스트4 />
     </div>
   );
 }
