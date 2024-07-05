@@ -22,6 +22,9 @@ import 예제3번 from './R08_State3.js';
 import 예제4번 from './R09_State4.js';
 import 예제5번 from './R10_State5.js';
 import 예제6번 from './R11_State6.js';
+import 컨텍스트1 from './R12_Context1.js';
+import 컨텍스트2 from './R13_Context2.js';
+import 부트스트랩1 from './R14_Bootstrap.js';
 
 function App() {
   return (
@@ -59,7 +62,10 @@ function App() {
         {/* init = 초기값, step = 증감값 */}
         {/* <예제4번 init="40" years="1" /> */}
         {/* <예제5번 /> */}
-        <예제6번 />
+        {/* <예제6번 /> */}
+        {/* <컨텍스트1 /> */}
+        {/* <부트스트랩1 /> */}
+        <컨텍스트2 />
     </div>
   );
 }
