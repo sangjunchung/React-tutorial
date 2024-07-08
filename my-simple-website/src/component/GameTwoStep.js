@@ -39,8 +39,9 @@ const GameTwoStep = () => {
         />
         <button>맞추기</button>
       </form>
-      <p>{message}</p>
-      <p>맞춘 횟수 : {tryto}</p>
+      <br />
+      <p>횟수 : {tryto}</p>
+      <p> 결과 : {message}</p>
     </div>
   );
 };

@@ -14,7 +14,8 @@ function App() {
       <Navbar />
       <Routes> {/* 링크 모음 */}
         <Route path='/' element={<Home/>} />
-        <Route path='/game' element={<GameTwoStep/>} />
+        <Route path='/game' element={<Game/>} />
+        <Route path='/game-twostep' element={<GameTwoStep/>} />
       </Routes>
     </div>
   );

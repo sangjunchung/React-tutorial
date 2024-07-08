@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Game = () => {
     const [guess, setGuess] = useState();
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState('정답을 맞춰주세요!');
     const [number, setNumber] = useState(Math.floor(Math.random()*10)+1);
     const [attempts, setAttempts] = useState(0);
-
+    // 사용자가 정답을 확인하면 다음 단계로 이동하는 버튼이 보이게 생성
+    const [isCorrect, setIsCorrect] = useState(false);
     // 사용자가 숫자를 맞추려고 시도할 때마다 숫자로를 새로 세팅해서 저장해놓기
     const handleChange = (e) => {
         setGuess(e.target.value);
@@ -22,6 +24,7 @@ const Game = () => {
         // 만약 숫자를 맞췄다면?
         if(userGuess === number){
             setMessage('축하합니다. 맞추셨습니다!');
+            setIsCorrect(true);
         } else if(userGuess > number) {
             setMessage('숫자가 너무 큽니다!');
         } else {
@@ -31,8 +34,13 @@ const Game = () => {
         setGuess('');
     }
 
-    const handleRestart = (e) => {
-
+    const handleRestart = () => {
+      const newNumber = Math.floor(Math.random()*10)+1;
+      setNumber(newNumber);
+      setAttempts(0);
+      setMessage('정답을 맞춰주세요!');
+      setGuess();
+      setIsCorrect(false);
     }
 
     return (
@@ -48,8 +56,14 @@ const Game = () => {
         <button>추측하기</button>
       </form>
       {/* 숫자를 맞췄는지 틀렸는지 확인하는 메세지 */}
-      <p>{message}</p>
-      <button onClick={handleRestart}>재시작 버튼</button>
+      <br />
+      <p>횟수 : {attempts}</p>
+      <p> 결과 : {message}</p>
+      {/* 
+      자바스크립트에서 제일 많이 쓰는 if 문은 삼항연산자 (? true : false)
+      true 나 false에서 실행할 내용이 많으면 ()괄호로 묶어서 표현
+      */}
+      {isCorrect ? (<Link to="/game-twostep"><button>다음 단계</button></Link>) : (<button onClick={handleRestart}>재시작 버튼</button>)}
     </div>
   );
 };
