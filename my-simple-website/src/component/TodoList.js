@@ -49,3 +49,6 @@ function TodoList() {
   
   export default TodoList;
   
+  /*
+  추후 useEffect 사용해서 웹사이트를 새로고침(F5) 하더라도 목록이 남아있을 수 있도록 업데이트
+  */
