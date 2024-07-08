@@ -6,7 +6,9 @@ function TodoList() {
     const [input, setInput] = useState('');
   
     const addTodo = () => {
-        setTodos([[...todos], { text: input, completed: false }]); //기존에 작성된 할 일 복제 후 추가
+        if(input.trim() != ''){
+          setTodos([...todos,{text: input, completed: false }]); //기존에 작성된 할 일 복제 후 추가
+        }
         setInput('');
     };
   
@@ -21,8 +23,8 @@ function TodoList() {
         <h1>Todo List</h1>
         <div>
           <input 
-            value={input} 
             onChange={(e)=>setInput(e.target.value)} 
+            value={input} 
             placeholder="새로운 할 일을  추가하세요."
           />
           <button onClick={addTodo}>할 일 추가하기</button>
