@@ -12,6 +12,12 @@ const RefInputFocus = () => {
         }
     }
 
+    useEffect(()=> {
+        if(inputRef.current) { // current 는 inputRef 가 설정된 태그값 확인
+            inputRef.current.focus();
+        }
+    },[]);
+
     return (
         <div>
             <input ref={inputRef} type='text' />
