@@ -29,6 +29,9 @@ import 컨텍스트4 from './component/R16_Context4/UserPrintSpace.js';
 import 부트스트랩1 from './component/R14_Bootstrap.js';
 import Ref예제1 from './component/R19_useRef.js';
 import Ref예제2 from './component/R20_useRefInput.js';
+import Ref예제3 from './component/R21_useRefSignUp.js';
+import Ref예제4 from './component/R22_useRefEx.js';
+import Dodgegobelin from './component/R23_Dodgegobelin/Dodgegobelin.js';
 
 function App() {
   return (
@@ -73,7 +76,10 @@ function App() {
         {/* <컨텍스트3 /> */}
         {/* <컨텍스트4 /> */}
         {/* <Ref예제1 /> */}
-        <Ref예제2 />
+        {/* <Ref예제2 /> */}
+        {/* <Ref예제3 /> */}
+        {/* <Ref예제4 /> */}
+        <Dodgegobelin />
     </div>
   );
 }
