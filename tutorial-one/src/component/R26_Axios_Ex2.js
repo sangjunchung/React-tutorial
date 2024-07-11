@@ -13,7 +13,7 @@ const Axion_Ex2 = () => {
       .catch(() => {
         alert("정보 가져오기 실패!");
       });
-  })
+  },[])
 
   return (
     <>
