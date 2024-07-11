@@ -1,0 +1,51 @@
+.typing-test {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.typing-test p {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.typing-test textarea {
+    width: 390px;
+    height: 90px;
+    resize: none;
+    font-size: 30px;
+}
+
+.typing-test button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: yellowgreen;
+    color: white;
+    cursor: pointer;
+}
+
+.typing-test button:hover {
+    background-color: rgb(194,243,94);
+    color: black;
+}
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+    ;
+}
+
+.character-image {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.result {
+    margin-top: 20px;
+}
+
