@@ -28,6 +28,7 @@ import 컨텍스트3 from "./component/R15_Context3/Parent.js";
 import 컨텍스트4 from './component/R16_Context4/UserPrintSpace.js';
 import 부트스트랩1 from './component/R14_Bootstrap.js';
 import Ref예제1 from './component/R19_useRef.js';
+import Ref예제2 from './component/R20_useRefInput.js';
 
 function App() {
   return (
@@ -71,7 +72,8 @@ function App() {
         {/* <컨텍스트2 /> */}
         {/* <컨텍스트3 /> */}
         {/* <컨텍스트4 /> */}
-        <Ref예제1 />
+        {/* <Ref예제1 /> */}
+        <Ref예제2 />
     </div>
   );
 }
