@@ -24,7 +24,7 @@ const Game = () => {
         obstacleImg.src = process.env.PUBLIC_URL + '/obstacle.png';
         obstacleImg.onload = () => {
             obstacleImageRef.current = obstacleImg;
-            console.log('Obstacle 이미지 가져오기 실패');
+            console.log('Obstacle 이미지 가져오기 성공');
         };
         obstacleImg.onerror = () => {
             console.error('Obstacle 이미지 가져오기 실패');
@@ -60,7 +60,7 @@ const Game = () => {
 
 
     useEffect(() => {
-        const canvas = canvasRef.current;
+        const canvas = canvasRef.current; // canvas = 사진이나 그림 배경을 표현할 때 사용
         const context = canvas.getContext('2d');
 
         const updateGame = () => {
@@ -124,6 +124,7 @@ const Game = () => {
 
     return (
         <div className="game-container">
+            {/* canvas는 동영상 캡처나 사진을 찍고 찍은 사진을 보여줄 때 보여줄수 있는 틀을 제공 */}
             <canvas ref={canvasRef} width="600" height="400" className="game-canvas" />
             <button onClick={() => setIsRunning(!isRunning)} className="game-button">
                 {isRunning ? 'Pause' : 'Start'}
