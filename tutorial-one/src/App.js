@@ -33,6 +33,7 @@ import Ref예제3 from './component/R21_useRefSignUp.js';
 import Ref예제4 from './component/R22_useRefEx.js';
 import Dodgegobelin from './component/R23_Dodgegobelin/Dodgegobelin.js';
 import Axios예제1번 from './component/R25_Axios_Ex1.js';
+import Axios예제2번 from './component/R26_Axios_Ex2.js';
 
 function App() {
   return (
@@ -81,7 +82,8 @@ function App() {
         {/* <Ref예제3 /> */}
         {/* <Ref예제4 /> */}
         {/* <Dodgegobelin /> */}
-        <Axios예제1번 />
+        {/*<Axios예제1번 /> */}
+        <Axios예제2번 />
     </div>
   );
 }

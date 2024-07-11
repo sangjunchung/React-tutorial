@@ -20,7 +20,7 @@ const Axios_Ex1 = () => {
         <>
             <h1>버튼을 클릭하면 json안에 작성된 내용 가져오기</h1>
             <button onClick={callBtn}>불러오기</button>
-            {data && <textarea rows={20} cols={30} value={JSON.stringify(data,null,2)} readOnly={true} />} 
+            {data && <textarea rows={20} cols={80} value={JSON.stringify(data,null,2)} readOnly={true} />} 
         </>
     )
 }
