@@ -17,6 +17,7 @@ const RefInputFocus = () => {
             inputRef.current.focus();
         }
     },[]);
+    // useEffect에서 ,[] 값이 비어있으면 .js 파일을 시작하자마자 특정 기능이나 효과 한번 실행
 
     return (
         <div>
