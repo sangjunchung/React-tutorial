@@ -12,32 +12,33 @@ R01.ClassComponent.js를 가져와서 App.js에 적용
 R01.ClassComponent.js R01 이라는 별칭을 사용해서 App.js 적용
 */
 import R01 from "./component/R01_ClassComponent.js";
-import R02 from './component/R02_FunctionComponent.js';
-import Props1 from './component/R03_Props.js';
-import Props2 from './component/R04_Props2.js';
-import Props3 from './component/R05_Props3.js';
-import 예제1 from './component/R06_State1.js'; // '' "" 크게 상관 없음
-import 예제2 from './component/R07_State2.js';
-import 예제3번 from './component/R08_State3.js';
-import 예제4번 from './component/R09_State4.js';
-import 예제5번 from './component/R10_State5.js';
-import 예제6번 from './component/R11_State6.js';
-import 컨텍스트1 from './component/R12_Context1.js';
-import 컨텍스트2 from './component/R13_Context2.js';
+import R02 from "./component/R02_FunctionComponent.js";
+import Props1 from "./component/R03_Props.js";
+import Props2 from "./component/R04_Props2.js";
+import Props3 from "./component/R05_Props3.js";
+import 예제1 from "./component/R06_State1.js"; // '' "" 크게 상관 없음
+import 예제2 from "./component/R07_State2.js";
+import 예제3번 from "./component/R08_State3.js";
+import 예제4번 from "./component/R09_State4.js";
+import 예제5번 from "./component/R10_State5.js";
+import 예제6번 from "./component/R11_State6.js";
+import 컨텍스트1 from "./component/R12_Context1.js";
+import 컨텍스트2 from "./component/R13_Context2.js";
 import 컨텍스트3 from "./component/R15_Context3/Parent.js";
-import 컨텍스트4 from './component/R16_Context4/UserPrintSpace.js';
-import 부트스트랩1 from './component/R14_Bootstrap.js';
-import Ref예제1 from './component/R19_useRef.js';
-import Ref예제2 from './component/R20_useRefInput.js';
-import Ref예제3 from './component/R21_useRefSignUp.js';
-import Ref예제4 from './component/R22_useRefEx.js';
-import Dodgegobelin from './component/R23_Dodgegobelin/Dodgegobelin.js';
-import Axios예제1번 from './component/R25_Axios_Ex1.js';
-import Axios예제2번 from './component/R26_Axios_Ex2.js';
-import Fetch예제1번 from './component/R28_Fetch_ex.js';
-import Fetch예제2번 from './component/R29_Fetch_ex2.js';
-import Board from './component/Board.js';
+import 컨텍스트4 from "./component/R16_Context4/UserPrintSpace.js";
+import 부트스트랩1 from "./component/R14_Bootstrap.js";
+import Ref예제1 from "./component/R19_useRef.js";
+import Ref예제2 from "./component/R20_useRefInput.js";
+import Ref예제3 from "./component/R21_useRefSignUp.js";
+import Ref예제4 from "./component/R22_useRefEx.js";
+import Dodgegobelin from "./component/R23_Dodgegobelin/Dodgegobelin.js";
+import Axios예제1번 from "./component/R25_Axios_Ex1.js";
+import Axios예제2번 from "./component/R26_Axios_Ex2.js";
+import Fetch예제1번 from "./component/R28_Fetch_ex.js";
+import Fetch예제2번 from "./component/R29_Fetch_ex2.js";
+import Board from "./component/R30_PagiNation/Board.js";
 import Album from "./component/R31_PagiNationEx/Album.js";
+import BoardTwo from "./component/R31_PagiNationEx2/Board.js";
 
 function App() {
   return (
@@ -47,16 +48,16 @@ function App() {
           { / * * / } -> 주로 코드를 주석 처리할 때 사용
     */
     <div className="App-header">
-        {/*<R01 />
+      {/*<R01 />
         <Props1 num='1' name='홍길동' age='20' score='90' />
         <Props1 num='2' name='홍길은' age='30' score='80' />
         <Props1 num='3' name='홍길금' age='40' score='70' />
         */}
-        {/*<R02 />
+      {/*<R02 />
         <h3>Props 예제 2번 사용하기</h3>
         <Props2 name='강감찬' age='72' gender="남자" />
         */}
-        {/*
+      {/*
         <Props2 name='강감찬' age='72' gender="남자" />
 
         Props2 객체는 아래와 같은 코드를 한 줄로 작성하기 위해 가져온 이름
@@ -69,29 +70,30 @@ function App() {
         <Props3 num='5' name="김연정" age='40' gender='여자' phone='010-1111-2222' />
         */}
 
-        {/* <예제1 /> */}
-        {/* <예제2 /> */}
-        {/* <예제3번 init="50" step="10" /> */}
-        {/* init = 초기값, step = 증감값 */}
-        {/* <예제4번 init="40" years="1" /> */}
-        {/* <예제5번 /> */}
-        {/* <예제6번 /> */}
-        {/* <컨텍스트1 /> */}
-        {/* <부트스트랩1 /> */}
-        {/* <컨텍스트2 /> */}
-        {/* <컨텍스트3 /> */}
-        {/* <컨텍스트4 /> */}
-        {/* <Ref예제1 /> */}
-        {/* <Ref예제2 /> */}
-        {/* <Ref예제3 /> */}
-        {/* <Ref예제4 /> */}
-        {/* <Dodgegobelin /> */}
-        {/*<Axios예제1번 /> */}
-        {/* <Axios예제2번 /> */}
-        {/* <Fetch예제1번 /> */}
-        {/* <Fetch예제2번 /> */}
-        {/* <Board /> */}
-        <Album />
+      {/* <예제1 /> */}
+      {/* <예제2 /> */}
+      {/* <예제3번 init="50" step="10" /> */}
+      {/* init = 초기값, step = 증감값 */}
+      {/* <예제4번 init="40" years="1" /> */}
+      {/* <예제5번 /> */}
+      {/* <예제6번 /> */}
+      {/* <컨텍스트1 /> */}
+      {/* <부트스트랩1 /> */}
+      {/* <컨텍스트2 /> */}
+      {/* <컨텍스트3 /> */}
+      {/* <컨텍스트4 /> */}
+      {/* <Ref예제1 /> */}
+      {/* <Ref예제2 /> */}
+      {/* <Ref예제3 /> */}
+      {/* <Ref예제4 /> */}
+      {/* <Dodgegobelin /> */}
+      {/*<Axios예제1번 /> */}
+      {/* <Axios예제2번 /> */}
+      {/* <Fetch예제1번 /> */}
+      {/* <Fetch예제2번 /> */}
+      {/* <Board /> */}
+      {/* <Album /> */}
+      <BoardTwo />
     </div>
   );
 }
