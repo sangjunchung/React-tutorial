@@ -35,6 +35,7 @@ import Dodgegobelin from './component/R23_Dodgegobelin/Dodgegobelin.js';
 import Axios예제1번 from './component/R25_Axios_Ex1.js';
 import Axios예제2번 from './component/R26_Axios_Ex2.js';
 import Fetch예제1번 from './component/R28_Fetch_ex.js';
+import Fetch예제2번 from './component/R29_Fetch_ex2.js';
 
 function App() {
   return (
@@ -85,7 +86,8 @@ function App() {
         {/* <Dodgegobelin /> */}
         {/*<Axios예제1번 /> */}
         {/* <Axios예제2번 /> */}
-        <Fetch예제1번 />
+        {/* <Fetch예제1번 /> */}
+        <Fetch예제2번 />
     </div>
   );
 }
