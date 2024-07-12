@@ -12,6 +12,7 @@ const Navbar = () => {
         <li><Link to="/todoList">할일 목록 작성</Link></li>
         <li><Link to="/tictaptoe">틱탭토 게임</Link></li>
         <li><Link to="/typingTest">타자치기 대회</Link></li>
+        <li><Link to="/movieRating">영화평점</Link></li>
       </ul>
     </nav>
   );
