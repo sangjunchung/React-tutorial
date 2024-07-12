@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Pagination from './R30_PageNation/Pagination';
+import Pagination from './R30_PagiNation/Pagination';
 import axios from 'axios';
 
 const Board = () => {
