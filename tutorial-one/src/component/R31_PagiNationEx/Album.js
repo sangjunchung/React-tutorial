@@ -6,7 +6,6 @@ const Album = () => {
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [itemPerPage] = useState(5);
-    const [loading, setLoading] = useState(true);
 
     const lastItem = currentPage * itemPerPage;
     const firstItem = lastItem - itemPerPage;
@@ -18,18 +17,11 @@ const Album = () => {
         axios.get('https://jsonplaceholder.typicode.com/photos')
         .then(result=>{
             setData(result.data);
-            setLoading(false);
         })
         .catch(err => {
             alert(err+' 발생!');
         })
     },[])
-
-    if(loading){
-         return(
-            <div><h1><b>Loading...</b></h1></div>
-         )
-    }
 
     return(
         <div>
