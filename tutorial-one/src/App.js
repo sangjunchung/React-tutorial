@@ -39,7 +39,8 @@ import Fetch예제2번 from "./component/R29_Fetch_ex2.js";
 import Board from "./component/R30_PagiNation/Board.js";
 import Album from "./component/R31_PagiNationEx/Album.js";
 import BoardTwo from "./component/R31_PagiNationEx2/Board.js";
-
+import Profile from './component/R32_Profile.js';
+import MultiImg from './component/R32_MultiProfile.js';
 function App() {
   return (
     /*
@@ -93,7 +94,9 @@ function App() {
       {/* <Fetch예제2번 /> */}
       {/* <Board /> */}
       {/* <Album /> */}
-      <BoardTwo />
+      {/* <BoardTwo /> */}
+      {/* <Profile /> */}
+      <MultiImg />
     </div>
   );
 }
