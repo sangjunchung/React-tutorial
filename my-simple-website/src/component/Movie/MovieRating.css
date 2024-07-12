@@ -1,0 +1,36 @@
+.movie-container{
+    text-align: center;
+}
+
+.movie-content{
+    display: flex;
+    flex-wrap: wrap;
+    /*
+    div 태그 안에서 몇 줄이 되도 상관없이 여러줄에 걸쳐 
+    자동으로 줄바꿈이 되도록 설정하는 것
+    */
+    justify-content: center;
+}
+
+.movie{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px #ddd;
+}
+
+.movie img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.movie h2{
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.movie p{
+    margin: 5px 0;
+}
