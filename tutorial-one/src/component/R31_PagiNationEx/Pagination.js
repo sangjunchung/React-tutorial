@@ -45,8 +45,15 @@ const Pagination = ({itemPerPage, totalItems, paginate, currentPage}) => {
                 {/* << 화살표 이용해서 이전으로 기능 만들기 */}
                 {currentPage > 1 && (
                 <li>
-                    <a onClick={()=> paginate(currentPage-1)} href="!#" className="page-link">
+                    <a onClick={()=> paginate(1)} href="!#" className="page-link">
                         &laquo;
+                    </a>
+                </li>
+                )}
+                {currentPage > 1 && (
+                <li>
+                    <a onClick={()=> paginate(currentPage-1)} href="!#" className="page-link">
+                        &lt;
                     </a>
                 </li>
                 )}
@@ -61,6 +68,13 @@ const Pagination = ({itemPerPage, totalItems, paginate, currentPage}) => {
                 {currentPage < totalPages && (
                 <li>
                     <a onClick={()=> paginate(currentPage+1)} href="!#" className="page-link">
+                        &gt;
+                    </a>
+                </li>
+                )}
+                {currentPage < totalPages && (
+                <li>
+                    <a onClick={()=> paginate(totalPages)} href="!#" className="page-link">
                         &raquo;
                     </a>
                 </li>
