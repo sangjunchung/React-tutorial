@@ -23,7 +23,7 @@ const Login = () => {
         .then(response => response.json())
         .then(map => {
             console.log(map);
-
+            
             // 로그인 실패시
             if(map.loginMember === null){
                 alert('아이디 또는 비밀번호가 일치하지 않습니다.');
@@ -33,16 +33,21 @@ const Login = () => {
             // 로그인 성공시
             setLoginMember(map.loginMember);
             // App.js에 로그인 성공한 정보가 올라감 App.js 로그인 정보를 다른 js에 전달
-            
+
             // id,pw값 모두 지우기
             setId('');
             setPw('');
+            alert("로그인 성공!");
         })
     }
 
+    const logoutBtn = () => {
+        setLoginMember(null);
+    }
 
     return(
         <div className="login-container">
+            {loginMember === null && (
             <table>
                 <tbody>
                     <tr>
@@ -68,6 +73,10 @@ const Login = () => {
                     </tr>
                 </tbody>
             </table>
+             )}
+            {loginMember&& (
+                <button onClick={logoutBtn}>로그아웃</button>
+            )}
         </div>
     )
 }

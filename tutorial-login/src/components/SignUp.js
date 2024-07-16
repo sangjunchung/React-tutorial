@@ -39,6 +39,11 @@ const SignUp = () => {
         })
     }
 
+    /*
+    F12 를 누르고 console(콘솔) 창에서 error 가 없는지 확인
+    만약 error 가 뜬다면 백엔드 서버와 연결이 안되어있을 확률이 높음
+    */
+   
     // 회원가입버튼
     const signUpBtn = () => {
         if(!idValidation){
@@ -82,6 +87,8 @@ const SignUp = () => {
                 // input 값들 모두 초기화
                 setId('');
                 setPw('');
+                setPw2('');
+                setName('');
             } else {
                 setResult('회원가입 실패');
             }
