@@ -65,3 +65,40 @@ nav ul li a:hover {
   background-color: #575757;
   border-radius: 4px;
 }
+
+.footer {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center; 
+  position: fixed;
+  bottom: 0;
+}
+/*
+111 ~ 111111 부터 시작하는 숫자 값은 검정 계열
+fff ~ ffffff 부터 시작하는 숫자 값은 흰색 계열
+*/
+.footer p {
+  margin: 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

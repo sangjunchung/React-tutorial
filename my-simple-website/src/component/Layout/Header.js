@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>My Simple Website</h1>
+        <h1>정상준의 리액트 포트폴리오</h1>
       </header>
     </div>
   );

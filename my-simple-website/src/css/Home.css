@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+.home-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.home-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.home-header p {
+    font-size: 16px;
+    color: #555;
+}
+
+/** 소개 섹션 1,2,보유기술,프로젝트 공통 CSS **/
+.home-about-one, 
+.home-about-two, 
+.home-skills,
+.home-projects {
+    margin-bottom: 40px;
+}
+.home-about-one h2, 
+.home-about-two h2, 
+.home-skills h2,
+.home-projects h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+
+/** 소개 섹션 1 사진 X **/
+.home-about-one p {
+    font-size: 20px;
+    color : #444;
+}
+
+/** 소개 섹션 2 사진 O **/
+/* 
+소개 섹션에서 1과 2가 동일한 css를 보유할 때는
+소개 섹션1클래스이름, 소개섹션2클래스이름 {
+    소개섹션1과 소개섹션2에 동일하게 작성할 css 코드를 작성
+}
+*/
+.home-about-two .about-row {
+    display: flex;
+    align-items: center;
+}
+.home-about-two .about-image {
+    flex: 1;
+    text-align: center;
+}
+.home-about-two .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.home-about-two .about-text {
+    flex: 2;
+    padding-left: 20px;
+}
+.home-about-two .about-text p {
+    font-size: 14px;
+    color: #444;
+}
+
+/** 보유 기술 섹션 **/
+.home-skills {
+    margin-bottom: 40px;
+}
+.home-skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+.home-skills ul li {
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #444;
+}
+.home-projects .project-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #e0e0e0;
+}
+.home-projects .project-item h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.home-projects .project-item p {
+    font-size: 25px;
+    color: #444;
+}
