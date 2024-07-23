@@ -36,19 +36,50 @@ app.post("/confirm/widget", function (req, res) {
   // 결제 승인 API를 호출하세요.
   // 결제를 승인하면 결제수단에서 금액이 차감돼요.
   // @docs https://docs.tosspayments.com/guides/v2/payment-widget/integration#3-결제-승인하기
+
+  /*
+  fetch("https://api.tosspayments.com/v1/payments/confirm", {
+  fetch 함수는 네트워크 요청을 보내는데 사용, 경제 승인을 받기 위해서는 toss에다가 결제 확인 전달
+  https://api.tosspayments.com/ -> 토슽 결제에 관련된 모든 내용이 들어있는 주소
+  v1/ = 버전 1
+  payments/ = 페이면츠 결제에 관련된
+  confirm = 확인하는 창구
+
+  method: "POST", -> 고객이 결제를 한 방식을 토스쪽에 전달 
+                     토스에서 잔액을 확인하거나 결제금액을 확인할 때는 GET
+
+  headers: {
+  토스한테 데이터가 어떤 타입인지(이미지 / 동영상 / 글자) 미리 전달
+
+    Authorization: encryptedWidgetSecretKey, 
+    Authorization: 결제한게 맞다는 인증키를 보내는 것
+
+    "Content-Type": "application/json",
+    Content-Type : 데이터 타입이 무엇인지 전달
+  },
+  */
   fetch("https://api.tosspayments.com/v1/payments/confirm", {
     method: "POST",
     headers: {
       Authorization: encryptedWidgetSecretKey,
       "Content-Type": "application/json",
     },
+    /*
+    body: JSON.stringify({
+      orderId: orderId,
+      amount: amount,
+      paymentKey: paymentKey,
+
+      전달 받은 값을 JSON.문자열로 변환함
+    }),
+    */
     body: JSON.stringify({
       orderId: orderId,
       amount: amount,
       paymentKey: paymentKey,
     }),
   }).then(async function (response) {
-    const result = await response.json();
+    const result = await response.json(); // 잠시 대기
     console.log(result);
 
     if (!response.ok) {
@@ -59,10 +90,26 @@ app.post("/confirm/widget", function (req, res) {
     }
 
     // TODO: 결제 완료 비즈니스 로직을 구현하세요.
-    res.status(response.status).json(result);
+    res.status(response.status).json(result); // 결과 전달 -> 결제 확인 페이지로 넘어감
   });
 });
+/*
+app.post("/confirm/widget")
+앱에서 .post로 들어오는 요청을 가져오는 주소 설정("html과 통신할 주소(url) 설정")
 
+function(req, res){}
+요청이 들어오면 수행할 기능 작성(){기능들 작성하기}
+요청이 들어오면 수행할 기능 작성(req, res){}
+req : server에 요청하는 값
+res : server에서 html 응답을 전달하는 값
+
+const { paymentKey, orderId, amount } = req.body;
+req.body = server에 db에 넣어달라하거나, 수정해달라고 요청하는 값들을 가지고 있는 몸통에서
+paymentKey = id 이름에서 paymentKey로 된 id 이름의 값을 가지고 있는 변수
+orderId = id 이름에서 orderId 로 된 id 이름의 값을 가지고 있는 변수
+amount = id 이름에서 amount 로 된 id 이름의 값을 가지고 있는 변수
+
+*/
 // 결제창 승인
 app.post("/confirm/payment", function (req, res) {
   const { paymentKey, orderId, amount } = req.body;
