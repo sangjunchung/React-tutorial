@@ -1,5 +1,7 @@
 import React from "react";
 import '../css/Home.css';
+import { Link } from "react-router-dom";
+import Hanbatang from './Projects/Hanbatang';
 
 const Home = () => {
     return (
@@ -44,11 +46,11 @@ const Home = () => {
             </section>
 
             {/** 프로젝트 소개 1개의 프로젝트당 섹션 1개씩 작성 **/}
+            <h2 className="projects-h2">프로젝트</h2>
             <section className="home-projects">
-                <h2>프로젝트</h2>
                 <div className="project-item">
-                    <h3>중간 과제 프로젝트 : 한바탕</h3>
-                    <p>간단한 프로젝트 설명</p>
+                    <h3>프로젝트 : 한바탕</h3>
+                    <Hanbatang />
                     {/* Link to 이용해서 프로젝트 이동 js 작성하기 */}
                 </div>
             </section>

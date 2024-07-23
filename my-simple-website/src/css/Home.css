@@ -30,7 +30,7 @@ body {
 .home-about-one h2, 
 .home-about-two h2, 
 .home-skills h2,
-.home-projects h2 {
+.projects-h2 {
     font-size: 28px;
     margin-bottom: 20px;
     color: #333;
